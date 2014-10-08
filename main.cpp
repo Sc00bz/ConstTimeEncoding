@@ -274,13 +274,13 @@ int testHex()
 
 int main()
 {
-	bool hasErrors = false;
+	bool hasErrors;
 
 	printf("*** Base64 ***\n");
-	hasErrors = hasErrors || testBase64() != 0;
+	hasErrors = testBase64() != 0;
 
 	printf("\n*** Hex ***\n");
-	hasErrors = hasErrors || testHex() != 0;
+	hasErrors = testHex() != 0 || hasErrors;
 	
 	if (hasErrors)
 	{
