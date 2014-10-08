@@ -50,7 +50,7 @@ int testBase64()
 		printf("base64Encode(allData) = %s\n", allDataBase64);
 
 		base64EncodeDotSlash(allDataBase64DotSlash, allData, size);
-		printf("base64EncodeDotSlash(allData) = %s\n\n", allDataBase64DotSlash);
+		printf("base64EncodeDotSlash(allData) = %s\n", allDataBase64DotSlash);
 
 		base64EncodeDotSlashOrdered(allDataBase64DotSlashOrdered, allData, size);
 		printf("base64EncodeDotSlash(allData) = %s\n\n", allDataBase64DotSlashOrdered);
@@ -113,10 +113,10 @@ int testBase64()
 		{
 			hasErrors = true;
 		}
-		printf("%s\n", (good ? "good" : "bad"));
+		printf("%s\n\n\n", (good ? "good" : "bad"));
 	}
 
-	printf("\nShould error:\n");
+	printf("Should error:\n");
 	ret = base64Decode(testAllData, allDataBase64DotSlash, sizeof(allDataBase64DotSlash) - 1);
 	printf("base64Decode(allDataBase64DotSlash) ret = %u: %s\n", ret, (ret != 0 ? "good" : "bad"));
 	if (ret == 0)
@@ -290,7 +290,5 @@ int main()
 	{
 		printf("\n***** ALL GOOD *****\n");
 	}
-
-	getchar();
 	return 0;
 }
