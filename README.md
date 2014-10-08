@@ -11,3 +11,7 @@ Base64 encoding with these character sets:
 Semi-tested
 ===========
 It looks correct there are some tests but there might be bugs.
+
+PHP
+===
+I'm pretty sure there are problems with PHP and multi-byte character strings. I think it's something screwy with strlen() and maybe ord() and chr(). So you should probably not use this yet.
